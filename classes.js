@@ -118,6 +118,7 @@ class Chef {
       loglog += `${this.dinners[i].appetizer}`, `${this.dinners[i].entree}`, `${this.dinners[i].dessert}`;
     }
     // console.log(loglog);
+    return order;
   }
 }
 
