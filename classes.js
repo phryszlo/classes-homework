@@ -95,3 +95,36 @@ for (let i = 2; i > 0; i--) {
 }
 console.log(timmy)
 
+
+class Dinner {
+  constructor(appetizer, entree, dessert) {
+    this.appetizer = appetizer;
+    this.entree = entree;
+    this.dessert = dessert;
+  }
+}
+class Chef {
+  constructor(name) {
+    this.name = name;
+  }          
+  dinners = [];
+  getOrder(appetizer, entree, dessert) {
+    const order = new Dinner(appetizer, entree, dessert);
+    this.dinners.push(order);
+    console.log(
+      `${this.name}: 
+      ${this.dinners.appetizer}`, 
+      `${this.dinners.entree}`, 
+      `${this.dinners.dessert}`);
+    let loglog = "chef's orders tonight have been ";
+    for (let i = 0; i < this.dinners.length; i++) {
+      loglog += `${this.dinners[i].appetizer}`, `${this.dinners[i].entree}`, `${this.dinners[i].dessert}`;
+    }
+    console.log(loglog);
+  }
+}                                                   
+
+const pierre = new Chef();
+pierre.getOrder('poppers', 'swordfish', 'cake');
+pierre.getOrder('salad', 'gefilte fish', 'mousse');
+pierre.getOrder('garlic twinkie bites', 'puffer fish', 'cake');
